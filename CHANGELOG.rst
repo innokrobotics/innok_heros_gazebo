@@ -2,8 +2,8 @@
 Changelog for package innok_heros_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.3 (2016-02-11)
+------------------
 * removed run  dependencies from Gazebo in package.xml
 * Contributors: Sabrina Heerklotz
 
