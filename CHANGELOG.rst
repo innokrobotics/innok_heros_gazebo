@@ -2,8 +2,8 @@
 Changelog for package innok_heros_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.4 (2016-03-03)
+------------------
 * removed roslaunch_add_file_check
 * added robot_state_publisher to get correct tf tree
 * Contributors: Sabrina Heerklotz
