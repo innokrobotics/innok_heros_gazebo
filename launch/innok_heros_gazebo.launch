@@ -4,8 +4,8 @@
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="gui" default="true"/>
-  <arg name="wheels" default="3"/>	<!-- "3" or "4" -->
-  <arg name="tyre_type" default=""/>	<!-- "default" or "tractor" -->
++ <arg name="wheel_kind" default="default"/>   <!-- default | tractor | tractor_large -->
++ <arg name="front_kind" default="4wd"/>       <!-- swing_axle | caster | 4wd -->
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="debug" value="false" />
@@ -17,7 +17,8 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-	 command="$(find xacro)/xacro '$(find innok_heros_description)/urdf/innok_heros_$(arg wheels)w$(arg tyre_type).xacro'" />
+	 command="$(find xacro)/xacro '$(find innok_heros_description)/urdf/innok_heros.xacro'
+            front_kind:=$(arg front_kind) wheel_kind:=$(arg wheel_kind)" />
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
